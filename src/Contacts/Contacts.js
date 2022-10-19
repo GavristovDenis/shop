@@ -12,7 +12,12 @@ export const ContactsPage = () => {
         <div>
             <div className="contacts_container">
                 <ContactsBracket mail={Contacts.mail} phone={Contacts.phone} adress={Contacts.adress} />
+
+
+
+                <div id="map" className="map"></div>
             </div>
+
         </div>
     )
 }

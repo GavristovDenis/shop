@@ -9,6 +9,49 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=72f6e753-2340-46a6-8793-fab1e70f65db&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      ymaps.ready(init);
+      function init() {
+        var myMap = new ymaps.Map(
+            "map",
+            {
+              center: [55.80784247, 37.573427],
+              zoom: 15,
+            },
+            {
+              searchControlProvider: "yandex#search",
+            }
+          ),
+          // Создаем геообъект с типом геометрии "Точка".
+          myGeoObject = new ymaps.GeoObject(
+            {
+              // Описание геометрии.
+              geometry: {
+                type: "Point",
+                coordinates: [55.80784247, 37.573427],
+              },
+              // Свойства.
+              properties: {
+                // Контент метки.
+                iconContent: "Мы тут!",
+              },
+            },
+            {
+              // Опции.
+              // Иконка метки будет растягиваться под размер ее содержимого.
+              preset: "islands#blackStretchyIcon",
+              // Метку можно перемещать.
+              draggable: true,
+            }
+          );
+
+        myMap.geoObjects.add(myGeoObject);
+      }
+    </script>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
