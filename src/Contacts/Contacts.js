@@ -15,7 +15,7 @@ export const ContactsPage = () => {
                 <YMaps >
                     <div className="map">
 
-                        <Map defaultState={{ center: [55.80784247, 37.57342700], zoom: 15, }} width={"500px"} height={"500px"} >   <Placemark geometry={[55.80784247, 37.57342700]} /></Map>
+                        <Map defaultState={{ center: [55.80784247, 37.57342700], zoom: 15, }} width={"500px"} height={"500px"} ><Placemark geometry={[55.80784247, 37.57342700]} /></Map>
 
                     </div>
 
