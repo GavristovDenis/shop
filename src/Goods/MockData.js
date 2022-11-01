@@ -17,21 +17,21 @@ export const CardInfo = [
     },
     {
         name: "Стул",
-        price: "500",
+        price: "700",
         img: "https://avatars.mds.yandex.net/get-mpic/6142463/img_id2076256070672885931.jpeg/orig"
     },
     {
         name: "Стул",
-        price: "500",
+        price: "700",
         img: "https://avatars.mds.yandex.net/get-mpic/6142463/img_id2076256070672885931.jpeg/orig"
     },
     {
         name: "Стул",
-        price: "500",
+        price: "1000",
         img: "https://avatars.mds.yandex.net/get-mpic/6142463/img_id2076256070672885931.jpeg/orig"
     },
     {
         name: "Стул",
-        price: "500",
+        price: "1500",
         img: "https://avatars.mds.yandex.net/get-mpic/6142463/img_id2076256070672885931.jpeg/orig"
     }]
