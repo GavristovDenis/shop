@@ -1,5 +1,4 @@
-import { CardInfo } from "./MockData";
-import { React, useState } from "react";
+import { React } from "react";
 
 
 export const Filter = ({ FilterData, setLesserNumber, setBiggerNumber }) => {

@@ -70,6 +70,7 @@ code {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
       font-size: larger;
+      transition-duration: 0.2s;
     }
     button:hover {
       background-color: whitesmoke;
@@ -107,7 +108,7 @@ code {
     align-items: center;
     width: 95%;
     height: 1000px;
-    margin-top: 200px;
+    margin-top: 0px;
     margin-bottom: 200px;
     scroll-snap-type: y mandatory;
     background-color: rgb(231, 231, 231);
@@ -156,7 +157,7 @@ code {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 100px;
     margin-bottom: 50px;
     height: 300px;
     width: 80%;
@@ -180,17 +181,16 @@ code {
     height: 500px;
     width: 500px;
     background-color: transparent;
-    margin-bottom: 200px;
+    margin-top: 50px;
   }
 
   .goods {
-    height: 500vh;
+    height: 170vh;
     .cards {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
-      margin-top: 150px;
     }
     .card_content {
       margin-top: 25px;
@@ -210,7 +210,20 @@ code {
       color: whitesmoke;
       font-size: 20px;
       border: 1px solid rgb(107, 106, 106);
+      transition: 0.5s;
     }
+    .goods_card:hover {
+      transition: 0.5s ease-out;
+      box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+      height: 510px;
+      width: 360px;
+      border: 1px solid #cccccc;
+      background-color: rgb(181, 38, 38);
+    }
+    .goods_card::after {
+      transition: 0.4ms;
+    }
+
     .goods_image {
       width: 300px;
       height: 350px;
@@ -219,6 +232,7 @@ code {
     .goods_info {
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
     .goods_button_cotainer {
       margin-top: 5px;
@@ -233,6 +247,7 @@ code {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
       font-size: larger;
+      transition-duration: 0.2s;
     }
     .goods_add_button:hover {
       background-color: whitesmoke;
@@ -265,6 +280,7 @@ code {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
       font-size: larger;
+      transition-duration: 0.2s;
     }
     button:hover {
       background-color: whitesmoke;
@@ -272,5 +288,93 @@ code {
       box-shadow: 0px 0px 5px whitesmoke;
       transition-duration: 0.2s;
     }
+  }
+  .cart_button {
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+    margin-right: 100px;
+    align-items: flex-end;
+    img {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+
+      transition: 0.5s;
+    }
+    img:hover {
+      transition: 0.5s;
+      width: 65px;
+      height: 65px;
+    }
+  }
+}
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+
+  .modal_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    width: 1000px;
+    background-color: #ffffff;
+  }
+  .modal_goods {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 300px;
+    margin-left: 50px;
+    border-bottom: 1px solid rgb(141, 14, 14);
+  }
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 20px;
+  margin-right: 50px;
+  height: 50px;
+}
+.close:hover {
+  transition: 0.2s;
+  color: rgb(141, 14, 14);
+  font-size: 22px;
+}
+.check_out_button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  button {
+    height: 50px;
+    width: 300px;
+    border: 0ch;
+    background-color: rgb(141, 14, 14);
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    color: rgb(193, 193, 193);
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: larger;
+    transition-duration: 0.2s;
+    cursor: pointer;
+  }
+  button:hover {
+    height: 55px;
+    width: 320px;
+    color: whitesmoke;
+    transition-duration: 0.2s;
   }
 }
