@@ -1,6 +1,20 @@
+import { React, useState } from "react"
+export const GoodsCard = ({ price, name, img, changeCart, cart }) => {
 
-export const GoodsCard = ({ price, name, img, AddToCart }) => {
-
+    const AddToCart = (name, price) => {
+        if (cart.length === 10) {
+            return
+        } else {
+            const addedCart = [
+                ...cart,
+                {
+                    name: name,
+                    price: price
+                }
+            ];
+            changeCart(addedCart)
+        }
+    }
     return (
         <div className="goods_card">
             <div className="card_content">

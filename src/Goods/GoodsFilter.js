@@ -1,7 +1,13 @@
 import { React } from "react";
 
 
-export const Filter = ({ FilterData, setLesserNumber, setBiggerNumber }) => {
+export const Filter = ({ setLesserNumber, setBiggerNumber, setFilteredData, PreFilteredData, lesserNumber, biggerNumber }) => {
+    const FilterData = () => {
+        setFilteredData(PreFilteredData.filter(v => parseInt(v.price) >= lesserNumber && parseInt(v.price) <= biggerNumber))
+        if (!lesserNumber && !biggerNumber) {
+            return setFilteredData(PreFilteredData)
+        }
+    }
     return (
         <div className="filter">
             <div>
