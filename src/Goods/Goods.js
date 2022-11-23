@@ -12,14 +12,18 @@ export const Goods = () => {
 
 
     const AddToCart = (name, price) => {
-        const addedCart = [
-            ...cart,
-            {
-                name: name,
-                price: price
-            }
-        ];
-        setCart(addedCart)
+        if (cart.length === 10) {
+            return
+        } else {
+            const addedCart = [
+                ...cart,
+                {
+                    name: name,
+                    price: price
+                }
+            ];
+            setCart(addedCart)
+        }
     }
     const FilterData = () => {
         setFilteredData2(filteredData.filter(v => parseInt(v.price) >= lesserNumber && parseInt(v.price) <= biggerNumber))
