@@ -18,6 +18,7 @@ export function MainPage() {
                 <div className="info_bracket_container">
                     {/*TODO Убрать return*/}
                     {Info.map((item, index) => {
+                        {/*TODO деструктуризация*/}
                         return (
                             <InfoBracket key={index} img={item.img} text={item.text} />
                         )
