@@ -5,11 +5,14 @@ export const Modal = ({ Close, cart }) => {
             <div className="modal_content" onClick={e => e.stopPropagation()}>
                 <div className="close" onClick={Close}>&#10006;</div>
                 <div className="modal_goods">
+                    {/*TODO Убрать return*/}
                     {cart.map((item) => {
+                        {/*TODO деструктуризация*/}
                         return (
                             <div className="cart_content"> {item.name} {item.price} рублей</div>
                         )
                     })}
+                    {/*TODO Вынести в const*/}
                     <div className="error_message">{cart.length === 10 ? "Достигнуто максимальное кол-во товаров в корзине" : " "}</div>
                 </div>
                 <div className="check_out_button"><button>Перейти к оформлению</button></div>
